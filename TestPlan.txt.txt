@@ -1,0 +1,22 @@
+TESTING PLAN
+Project: Corporate Weekly Report Generator
+
+OBJECTIVE:
+Ensure the Prototype Pattern correctly clones objects without modifying the original template.
+
+TEST CASE 1: Verify Cloning Capability
+- Action: Request a report with ID "1" from the Registry.
+- Expected Result: The system returns a Report object that is NOT null.
+- Status: Pass
+
+TEST CASE 2: Verify Data Independence
+- Action: 
+    1. Clone Report A from Registry.
+    2. Change the content of Report A.
+    3. Clone Report B from Registry.
+- Expected Result: Report B should still have the original "Template" content, not the changes made to Report A.
+- Status: Pass
+
+TEST CASE 3: Performance (Optional)
+- Action: Measure time to Clone vs Time to Create New Object.
+- Expected Result: Cloning is faster for complex objects.
